@@ -123,14 +123,14 @@ function defineGraph() {
     .attr("y", 40)
     .attr("value", "age") 
     .classed("inactive", true)
-    .text("Age (Median)");
+    .text("Median Age");
 
   var incomeLabel = labelsGroup.append("text")
     .attr("x", 0)
     .attr("y", 60)
     .attr("value", "income") 
     .classed("inactive", true)
-    .text("Household Income (Median)");
+    .text("Median Household Income");
 
   // define 3 x axis labels: obesity, smokes and lacks healthcare
   var ylabelsGroup = chartGroup.append("g").attr("transform", "rotate(-90)").attr("dy", "1em").classed("atext", true)
@@ -154,7 +154,7 @@ function defineGraph() {
     .attr("x", 0 - (height / 2))
     .attr("value", "healthcare") 
     .classed("inactive", true)
-    .text("Lacks Healthcare (%)");
+    .text("Lacking Healthcare (%)");
 
   // updateToolTip functions for the circles and the text on the circles
   var circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
